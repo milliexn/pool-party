@@ -1,0 +1,120 @@
+[data-theme="light"] {
+    background-color: var(--color);
+    color: var(--txcolor);
+    --color: #fafafa;
+    --txcolor: #333333;
+    --color2: #ccc;
+    --footer-color: #d2d2d2;
+}
+
+[data-theme="dark"] {
+    background-color: var(--color);
+    /* background-color: var(--color-orange); */
+    color: var(--txcolor);
+    --color: #1e1e1e;
+    --txcolor: #d8d8d8;
+    --color2: #0c0c0c;
+    --footer-color: #111111;
+}
+
+/* Preloader */
+#preloader {
+    background-color: var(--color) !important;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden !important;
+    z-index: 99;
+    /* animation: preload 0.7s 0s forwards; */
+    background-image: url("../assets/logo.png");
+    /* , url("https://superstorefinder.net/support/wp-content/uploads/2018/01/orange_circles.gif"); */
+    background-position: center;
+    /* background-position-y: inherit, 40px; */
+    background-repeat: no-repeat;
+    background-size: 10%;
+    visibility: visible;
+}
+
+@keyframes preload {
+    to{
+        visibility: hidden;
+    }
+}
+
+/* Waiting for preloader */
+body {
+    /* animation: bgLoading 0s 0.7s forwards; */
+    visibility: hidden;
+}
+
+@keyframes bgLoading {
+    to {
+        visibility: visible;
+    }
+}
+
+/* Scroll Bar */
+body::-webkit-scrollbar {
+    width: 1vh;
+    /* transition: 0.4s; */
+    cursor: grabbing;
+}
+
+body::-webkit-scrollbar-thumb {
+    cursor: grabbing;
+    margin: 0 10vw 0 10%;
+    border-radius: 10px;
+    background-color: var(--color2);
+    background-blend-mode: overlay;
+}
+
+body::-webkit-scrollbar-track {
+    background-image: linear-gradient(to bottom, var(--brand-color1), var(--brand-color2));
+}
+
+* {
+    --brand-color1: #9D3BE1;
+    --brand-color2: #7CFCA0;
+    --brand-color3:  #42c1a0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+    scroll-behavior: smooth;
+    /* transition: 0.4s; */
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: background-color,border-color 0.4s;
+}
+
+.content {
+    margin: 0 2vmax 0 2vmax;
+    padding-top: min(17vh, 12vw);
+    padding-bottom: min(4vh, 2vw);
+    text-align: center;
+    margin-bottom: auto;
+    line-height: 1.5;
+    /* transition: 0.4s; */
+}
+
+.ad-vertical{
+    content: "Ad";
+    width: 120vw;
+    height: 100vh;
+    background-color: var(--txcolor);
+}
+
+.ad-footer{
+    margin: 1vmax;
+    content: "Ad";
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 30vmin;
+    background-color: var(--txcolor);
+}
