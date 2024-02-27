@@ -30,7 +30,7 @@ let checkBox2;
 document.addEventListener("DOMContentLoaded", function () {
 
     const header = document.querySelector('.header');
-    fetch('../header.html')
+    fetch('./header.html')
         .then(res => res.text())
         .then(data => {
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     const footer = document.querySelector('.footer');
-    fetch('../footer.html')
+    fetch('./footer.html')
         .then(res => res.text())
         .then(data => {
             footer.innerHTML = data;
